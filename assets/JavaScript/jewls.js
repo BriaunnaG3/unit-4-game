@@ -9,8 +9,7 @@ $(document).ready(function () {
     var randomTarget = Math.floor(Math.random() * 102) + 19;
     console.log("random number: ", randomTarget);
 
-
-
+    
     /* First image clicked, add points */
     $('#btn-1').click(function () {
         usertotal += numberOptions[0];
@@ -50,14 +49,16 @@ $(document).ready(function () {
             wins;
             alert("You Win");
             document.getElementById('wins').value = + 1;
-        
+            document.location.reload();
+                        clearInterval(interval);
 
         }
         else if (usertotal > randomTarget) {
             loses;
             alert("You lost");
             document.getElementById('loses').value = + 1;
-            
+            document.location.reload();
+            clearInterval(interval);
         }
 
     }
