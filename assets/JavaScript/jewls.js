@@ -62,5 +62,6 @@ $(document).ready(function () {
         }
 
     }
+    $('usertotal','randomTarget').empty
   
 });
