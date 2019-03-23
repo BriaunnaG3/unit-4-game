@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
-    var numberOptions = [25, 5, 3, 10];
+    var numberOptions = [25, 5, 1, 10];
     var counter = 0;
     var usertotal = 0;
-    var win = 0;
-    var lose = 0;
+    var wins = 0;
+    var loses = 0;
 
     var randomTarget = Math.floor(Math.random() * 102) + 19;
     console.log("random number: ", randomTarget);
@@ -46,22 +46,24 @@ $(document).ready(function () {
 
     function checkScore() {
         if (usertotal === randomTarget) {
-            wins;
+            wins=0;
             alert("You Win");
             document.getElementById('wins').value = + 1;
-            document.location.reload();
-                        clearInterval(interval);
+            $('usertotal').empty;
+             document.location.reload();
+            clearInterval(interval);
+            
 
         }
         else if (usertotal > randomTarget) {
-            loses;
+            loses=0;
             alert("You lost");
             document.getElementById('loses').value = + 1;
+            $('usertotal').empty;
             document.location.reload();
             clearInterval(interval);
         }
 
     }
-    $('usertotal','randomTarget').empty
-  
+   
 });
